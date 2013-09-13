@@ -1,0 +1,7 @@
+name: EasySoup
+version: 1.0.6
+main: me.iaero.easysoup.EasySoup
+commands:
+  soup:
+    description: soup
+    aliases: [s, refill, re]
