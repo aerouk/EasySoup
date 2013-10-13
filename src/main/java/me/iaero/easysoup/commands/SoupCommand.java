@@ -7,27 +7,32 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-public class SoupCommand implements CommandExecutor {
-
-    public ItemStack soup() {
+public class SoupCommand implements CommandExecutor
+{
+    public ItemStack soup()
+    {
         return (new ItemStack(Material.MUSHROOM_SOUP));
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (sender instanceof Player) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
+    {
+        if (sender instanceof Player)
+        {
             Player player = (Player)sender;
 
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 8; i++)
+            {
                 player.getInventory().addItem(soup());
             }
 
             player.sendMessage("Your soup has been refilled.");
-        } else {
+        }
+        else
+        {
             sender.sendMessage("Please use this command in-game.");
         }
 
         return false;
     }
-
 }

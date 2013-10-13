@@ -6,10 +6,11 @@ import me.iaero.easysoup.listeners.PlayerListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class EasySoup extends JavaPlugin implements Listener {
-
+public class EasySoup extends JavaPlugin implements Listener
+{
     @Override
-    public void onEnable() {
+    public void onEnable()
+    {
         getServer().getLogger().info("EasySoup [v" + getDescription().getVersion() + "] has been enabled!");
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
@@ -17,8 +18,8 @@ public class EasySoup extends JavaPlugin implements Listener {
     }
 
     @Override
-    public void onDisable() {
+    public void onDisable()
+    {
         getServer().getLogger().info("EasySoup [v" + getDescription().getVersion() + "] has been disabled!");
     }
-
 }
