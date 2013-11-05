@@ -1,9 +1,7 @@
 package me.iaero.easysoup.commands;
 
 import org.bukkit.Material;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
+import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -21,16 +19,24 @@ public class SoupCommand implements CommandExecutor
         {
             Player player = (Player)sender;
 
-            for (int i = 0; i < 8; i++)
+            if (player.hasPermission("easysoup.soup") || player.isOp())
             {
-                player.getInventory().addItem(soup());
-            }
+                for (int i = 0; i < 8; i++)
+                {
+                    player.getInventory().addItem(soup());
+                }
 
-            player.sendMessage("Your soup has been refilled.");
+                player.sendMessage("§aYour soup has been refilled.");
+                return true;
+            }
+            else
+            {
+                player.sendMessage("§cYou do not have permission to execute this command!");
+            }
         }
         else
         {
-            sender.sendMessage("Please use this command in-game.");
+            sender.sendMessage("§cPlease use this command in-game.");
         }
 
         return false;
