@@ -6,11 +6,10 @@ import me.iaero.easysoup.listeners.PlayerListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class EasySoup extends JavaPlugin implements Listener
-{
+public class EasySoup extends JavaPlugin implements Listener {
+
     @Override
-    public void onEnable()
-    {
+    public void onEnable() {
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
         getCommand("soup").setExecutor(new SoupCommand());
@@ -20,4 +19,5 @@ public class EasySoup extends JavaPlugin implements Listener
     public void onDisable()
     {
     }
+
 }
