@@ -2,6 +2,7 @@ package me.iaero.easysoup;
 
 import me.iaero.easysoup.commands.SoupCommand;
 import me.iaero.easysoup.listeners.PlayerListener;
+import me.iaero.easysoup.utils.ChatHelper;
 
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,8 +17,9 @@ public class EasySoup extends JavaPlugin implements Listener {
     }
 
     @Override
-    public void onDisable()
-    {
+    public void onDisable() {
     }
+    
+    public static ChatHelper chat;
 
 }
