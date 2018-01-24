@@ -1,0 +1,7 @@
+name: EasySoup
+version: 1.1
+main: me.iaero.easysoup.EasySoup
+commands:
+    soup:
+        description: Refill 8 soup to the inventory.
+        aliases: [s, refill]
